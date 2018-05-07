@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     tools:context=".Home"
-    android:background="@drawable/backgroundimg">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,112 +14,520 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:hint="Name"
-            android:textColorHint="#ffb301"
-            android:textColor="#ffb301"/>
-
-        <EditText
-            android:id="@+id/editText7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:hint="Name1"
-            android:textColorHint="#ffb301"
-            android:textColor="#ffb301"/>
-
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Que"
-            android:textColor="#ffb301"/>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="wrap_content"
+            android:layout_height="381dp"
+            android:layout_weight="1">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option1"
-                android:layout_weight="1"
-                android:textColor="#ffb301"
-                android:buttonTint="#ffb301"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option1"
-                android:layout_weight="1"
-                android:textColor="#ffb301"
-                android:buttonTint="#ffb301"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option1"
-                android:layout_weight="1"
-                android:textColor="#ffb301"
-                android:buttonTint="#ffb301"/>
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option1"
-                android:layout_weight="1"
-                android:textColor="#ffb301"
-                android:buttonTint="#ffb301"/>
+                            <TextView
 
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Date" />
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Select"
-                android:textColor="#ffb301"/>
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="02/02/2020" />
+                        </TableRow>
 
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner"
-                android:layout_weight="1"
-                >
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-            </Spinner>
+                            <TextView
 
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name" />
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ABC" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Truck No." />
+
+                            <EditText
+                                android:id="@+id/truckNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HP-15-1626" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Driver Mobile NO" />
+
+                            <TextView
+                                android:id="@+id/drivermobileno"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9999999999" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="D.O.B." />
+
+                            <TextView
+                                android:id="@+id/dob"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="04.05.2020" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DL No." />
+
+                            <TextView
+                                android:id="@+id/dlno"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MH1234567" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DL Validity" />
+
+                            <TextView
+                                android:id="@+id/dlval"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="02.03.2020" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GPS" />
+
+                            <TextView
+                                android:id="@+id/gps"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NON-GPS" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Load Type" />
+
+                            <TextView
+                                android:id="@+id/loadtype"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="cement" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Transport" />
+
+                            <TextView
+                                android:id="@+id/transport"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="S.D.T.O" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Driver Family Particulars" />
+
+                            <TextView
+                                android:id="@+id/family"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MOTHER  FATHER" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Driving Since" />
+
+                            <TextView
+                                android:id="@+id/dsince"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2010" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Old Employer" />
+
+                            <TextView
+                                android:id="@+id/oldemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LOCAL" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Safety Trainings Attended" />
+
+                            <TextView
+                                android:id="@+id/safetrainings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="YES" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Driver Address" />
+
+                            <TextView
+                                android:id="@+id/Daddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BILASPUR" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Emergency Contact No." />
+
+                            <TextView
+                                android:id="@+id/econtact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="88888888" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vehicle Regn. No." />
+
+                            <TextView
+                                android:id="@+id/vehicalregno"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HP-15-1626" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vehicle Type" />
+
+                            <TextView
+                                android:id="@+id/vehicaltype"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6W 1613" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vehicle Make" />
+
+                            <TextView
+                                android:id="@+id/vmake"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TATA" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vehicle Type" />
+
+                            <TextView
+                                android:id="@+id/vmodel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2010" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Origin" />
+
+                            <TextView
+                                android:id="@+id/origin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DARLA" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Destination" />
+
+                            <TextView
+                                android:id="@+id/destination"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6W 1613" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dedicated / Market" />
+
+                            <TextView
+                                android:id="@+id/dm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DEDICATED" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DMC Topic Shared (Ref #)" />
+
+                            <TextView
+                                android:id="@+id/dmctopic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Site Rules, MD, DD,SD, JRM etc." />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Driver Medical Condition" />
+
+                            <TextView
+                                android:id="@+id/dmedical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ok" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Driver Feedback on Temp Hazards   " />
+
+                            <TextView
+                                android:id="@+id/dfeedback"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="good" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Accident History" />
+
+                            <TextView
+                                android:id="@+id/ahistory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NO" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Trainer Name" />
+
+                            <TextView
+                                android:id="@+id/trainername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SUKHVINDER" />
+                        </TableRow>
+
+                    </TableLayout>
+                </LinearLayout>
+
+            </ScrollView>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
+            android:layout_weight="1"
             android:gravity="bottom|center"
-            android:layout_weight="1">
+            android:orientation="horizontal">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Submit"
                 android:background="@drawable/mybutton"
                 android:padding="4dp"
+                android:text="Submit"
                 android:textColor="@android:color/black"
 
                 />
@@ -133,11 +541,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Clear"
                 android:background="@drawable/mybutton"
                 android:padding="4dp"
-                android:textColor="@android:color/black"
-                />
+                android:text="Clear"
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
     </LinearLayout>
