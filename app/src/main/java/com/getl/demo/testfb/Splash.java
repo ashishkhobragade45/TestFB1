@@ -55,7 +55,7 @@ public class Splash extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 imageView.startAnimation(animation_2);
                 finish();
-                Intent i = new Intent(getBaseContext(),Home.class);
+                Intent i = new Intent(getBaseContext(),Login.class);
                 startActivity(i);
             }
 
