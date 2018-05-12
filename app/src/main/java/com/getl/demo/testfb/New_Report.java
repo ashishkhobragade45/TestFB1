@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.getl.demo.testfb.Model.Demo_employees;
 import com.getl.demo.testfb.Model.Employees;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,9 +21,8 @@ import java.io.Console;
 
 public class New_Report extends AppCompatActivity {
 
-    EditText txtcompany,txtzon,txtlocation,txtdlno;
-    Button btnSearch;
-    String sCompany,sZone,sLocation,sDlno;
+    EditText txtdlno,txtdname,txttopics;
+    Button btnsave;
 
 
     @Override
@@ -30,44 +30,39 @@ public class New_Report extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new__report);
 
-        txtcompany = (EditText)findViewById(R.id.company);
-        txtzon = (EditText)findViewById(R.id.zon);
-        txtlocation = (EditText)findViewById(R.id.location);
-        txtdlno = (EditText)findViewById(R.id.dlno);
+        txtdlno = (EditText)findViewById(R.id.dlid);
+        txtdname = (EditText)findViewById(R.id.txtdname);
+        txttopics = (EditText)findViewById(R.id.txttopics);
 
-        btnSearch = (Button)findViewById(R.id.btnsearch);
+        btnsave = (Button)findViewById(R.id.btnsave);
 
-        sCompany = txtcompany.getText().toString().trim();
-        sZone = txtlocation.getText().toString().trim();
-        sLocation =txtlocation.getText().toString().trim();
-        sDlno = txtdlno.getText().toString().trim();
 
         FirebaseDatabase database;
-       final DatabaseReference emp,company;
+       final DatabaseReference emp,dlno;
 
         //init firebased
 
         database = FirebaseDatabase.getInstance();
-        emp = database.getReference("acc");
-        Log.e("Name", String.valueOf(emp));
+        emp = database.getReference("driverDB");
 
-
-
-        btnSearch.setOnClickListener(new View.OnClickListener() {
+        btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 emp.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        if(dataSnapshot.child(txtdlno.getText().toString()).exists()) {
-
-
-                        }
-                        else
-                        {
-                            Toast.makeText(New_Report.this, "Driver not in DB", Toast.LENGTH_SHORT).show();
-                        }
+                            if(dataSnapshot.child(txtdlno.getText().toString()).exists())
+                            {
+                                Toast.makeText(New_Report.this, "Driver in DB", Toast.LENGTH_SHORT).show();
+                            }
+                            else
+                            {
+                                Demo_employees demo_employees = new Demo_employees(txtdlno.getText().toString(),txttopics.getText().toString(),txtdname.getText().toString());
+                                emp.child(txtdlno.getText().toString()).setValue(demo_employees);
+                                Toast.makeText(New_Report.this, "Driver Added", Toast.LENGTH_SHORT).show();
+                                finish();
+                            }
                     }
 
                     @Override
@@ -75,7 +70,11 @@ public class New_Report extends AppCompatActivity {
 
                     }
                 });
+
             }
         });
+
+
+
     }
 }
